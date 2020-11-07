@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/visitor.css"">
+    <title>Visitor</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Visitor List</h1>
+
+        <form action="/visitor/in" method="POST" id="addVisitor">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="mobile" placeholder="Mobile">
+            <input type="text" name="address" placeholder="Address">
+            <input type="text" name="destination" placeholder="Destination">
+            <button type="submit">Add Visitor</button>
+        </form>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'log'); visitorLog()">Visitor Log</button>
+            <button class="tablinks" onclick="openCity(event, 'listing'); visitorListing()">Visitor Listing</button>
+        </div>
+
+        <div id="listing" class="tabcontent">
+            <br />
+            <div>
+                <input id="listingSearchInput" type="text" placeholder="Mobile" onchange="listingSearch()">
+                <input type="date" id="fromDate" placeholder="From">
+                <input type="date" id="toDate" placeholder="to">
+                <button onclick="listingSearch()">Search</button>
+            </div>
+            <br/>
+            <table id="visitorListingTable">
+                <thead>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Destination</th>
+                    <th>In Time</th>
+                    <th>Out Time</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="log" class="tabcontent">
+            <br />
+            <div>
+                <input id="logSearchInput" type="text" placeholder="Name / Mobile" onchange="logSearch()">
+                <button onclick="logSearch()">Search</button>
+            </div>
+            <br/>
+            <table id="visitorLogTable">
+                <thead>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Destination</th>
+                    <th>In Time</th>
+                    <th>Out Time</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    <script src="/js/visitor.js"></script>
+</body>
+</html>
