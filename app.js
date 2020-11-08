@@ -1,7 +1,7 @@
 const express = require('express'),
 	bodyparser = require('body-parser'),
 	dotEnv = require('dotenv'),
-	dbconn = require('./db'),
+	dbconn = require('./db');
 
 const app = express();
     
