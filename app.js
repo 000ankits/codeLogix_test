@@ -1,9 +1,7 @@
 const express = require('express'),
 	bodyparser = require('body-parser'),
-	// session = require('express-session'),
 	dotEnv = require('dotenv'),
 	dbconn = require('./db'),
-    methodOverride = require('method-override'); 
 
 const app = express();
     
